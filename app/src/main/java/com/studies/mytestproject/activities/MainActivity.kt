@@ -88,8 +88,10 @@ class MainActivity : AppCompatActivity() {
             dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             donebutton.setOnClickListener {
                 val moviereleaseyear=dialog.findViewById<EditText>(R.id.releaseyeartext).text.toString().toString()
-                val rating10=dialog.findViewById<EditText>(R.id.rating10).text.toString().toFloat()
-                val rating5=dialog.findViewById<EditText>(R.id.rating5).text.toString().toFloat()
+                val ratingText = dialog.findViewById<EditText>(R.id.rating10).text.toString()
+                val rating10 = if (ratingText.isEmpty()) 0.0f else ratingText.toFloat()
+                val ratingText2 = dialog.findViewById<EditText>(R.id.rating10).text.toString()
+                val rating5 = if (ratingText2.isEmpty()) 0.0f else ratingText.toFloat()
                 Log.d("dkrgjgfwej","$moviereleaseyear  ${rating10.toString()}   ${rating5.toString()}")
                 dialog.dismiss()
                 val templist= mutableListOf<movieitem>()
