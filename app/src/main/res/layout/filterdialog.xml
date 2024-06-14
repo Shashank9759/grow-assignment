@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="15dp"
+    android:background="@color/white"
+    app:cardCornerRadius="10dp"
+    android:layout_gravity="center"
+    android:layout_height="250dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:layout_gravity="center_horizontal"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="10dp"
+                android:text="Release Year"/>
+            <EditText
+                android:id="@+id/releaseyeartext"
+                android:layout_width="70dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/customsearchlayout"
+                android:layout_height="40dp"
+
+                android:gravity="center"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:text="10-base rating"/>
+            <EditText
+                android:id="@+id/rating10"
+                android:layout_width="70dp"
+                android:background="@drawable/customsearchlayout"
+                android:layout_height="40dp"
+                android:inputType="number|numberDecimal"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+   android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:text="5-base rating"/>
+            <EditText
+                android:id="@+id/rating5"
+                android:layout_width="70dp"
+                android:background="@drawable/customsearchlayout"
+                android:layout_height="40dp"
+                android:inputType="number|numberDecimal"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                />
+        </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/donebutton"
+            android:layout_marginTop="10dp"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Done"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
